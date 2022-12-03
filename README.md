@@ -33,7 +33,11 @@ This projects was built with NextJS and Prisma as an ORM.
    ```sh
    git clone https://github.com/eliabefranca/wet-bat
     ```
-2. Install NPM packages
+2. Enter the project folder
+   ```sh
+   cd wet-bat
+   ```
+3. Install NPM packages
     ```sh
     yarn install
     ```
