@@ -1,0 +1,23 @@
+// schema.prisma
+datasource db {
+    provider = "sqlite"
+    url      = env("DATABASE_URL")
+}
+
+generator client {
+    provider = "prisma-client-js"
+}
+
+model Quote {
+    id         String   @id @default(cuid())
+    from       String
+    to         String
+    name       String
+    departDate DateTime
+    returnDate DateTime
+    travellers Int
+    createdAt  DateTime @default(now())
+    updatedAt  DateTime @updatedAt
+
+    @@map("quotes")
+}
