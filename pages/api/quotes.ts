@@ -23,8 +23,6 @@ export default async function handler(req, res) {
       const page = parseInt(req.query.page as string) || 1;
       const limit = 10;
 
-      const quoteId = req.query.quoteId as string;
-
       try {
         const quotes = await prisma.quote.findMany({
           skip: (page - 1) * limit,
@@ -37,6 +35,7 @@ export default async function handler(req, res) {
         console.log(error.message);
         res.status(400).json({ error });
       }
+      break;
     default:
       res.setHeader('Allow', ['POST']);
       res.status(405).end(`Method ${method} Not Allowed`);
