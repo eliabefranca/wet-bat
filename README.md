@@ -41,6 +41,10 @@ This projects was built with NextJS and Prisma as an ORM.
     ```sh
     yarn install
     ```
+4. Create .env file
+    ```sh
+    cp .env.example .env
+    ```
 
 #### Running the project
 1. Setting up the database
